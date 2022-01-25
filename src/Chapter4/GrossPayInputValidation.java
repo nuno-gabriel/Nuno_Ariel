@@ -25,7 +25,7 @@ public class GrossPayInputValidation {
 
         //Calculate gross
         double gross = rate * hoursWorked;
-        System.out.println("Gross pay: $" + gross);
+        System.out.println("esto va a pagar!!!! Gross pay: $" + gross);
 
 
 
