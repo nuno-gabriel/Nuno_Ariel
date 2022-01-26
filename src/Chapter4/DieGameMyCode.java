@@ -1,6 +1,7 @@
 package Chapter4;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class DieGameMyCode {
 
@@ -11,8 +12,11 @@ public class DieGameMyCode {
 
         Random random = new Random();
 
-        System.out.println("Hello, welcome to this game. Do you want to play?");
-
+        System.out.println("Hello, welcome to this game. Do you want to play?(type true or false)");
+        Scanner scanner = new Scanner(System.in);
+        boolean answer = scanner.nextBoolean();
+        if (answer){
+        scanner.close();
 
 
          for (int i = 1; i <= tries; i++) {
@@ -40,5 +44,7 @@ public class DieGameMyCode {
 
             System.out.println();
         }
-    }
+    } else {
+            Sys();
+        }
 }
