@@ -16,6 +16,8 @@ public class DieGameMyCode {
         Scanner scanner = new Scanner(System.in);
         boolean answer = scanner.nextBoolean();
         if (answer) {
+            System.out.println("Type your name");
+            Scanner name = new Scanner (System.in);
             scanner.close();
 
 
