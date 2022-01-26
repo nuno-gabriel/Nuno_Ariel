@@ -11,7 +11,7 @@ public class GrossPayInputValidation {
 
 
         //Get input for unknown variables
-        System.out.println("How many hours did you work this week?");
+        System.out.println("days of the week*****************????");
         Scanner scanner = new Scanner(System.in);
         double hoursWorked = scanner.nextDouble();
 
