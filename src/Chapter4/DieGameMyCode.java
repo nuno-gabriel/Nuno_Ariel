@@ -15,10 +15,11 @@ public class DieGameMyCode {
         System.out.println("Hello, welcome to this game. Do you want to play?(type true or false)");
         Scanner scanner = new Scanner(System.in);
         boolean answer = scanner.nextBoolean();
+        System.out.println("Type your name");
+        Scanner name = new Scanner(System.in);
+
+        String neeem = name.nextLine();
         if (answer) {
-            System.out.println("Type your name");
-            Scanner name = new Scanner (System.in);
-            scanner.close();
 
 
             for (int i = 1; i <= tries; i++) {
@@ -37,7 +38,7 @@ public class DieGameMyCode {
                 } else if (i == tries && currentposition < Victory) {
                     System.out.println("You're on space " + currentposition + ".");
                     System.out.println("Unfortunately, you didn't make it to all " +
-                            currentposition + " spaces. You lose!");
+                            currentposition + " spaces. You lose " + neeem +"!");
                 } else {
                     int spacesToGo = Victory - currentposition;
                     System.out.print("You are now on space " + currentposition +
@@ -47,7 +48,7 @@ public class DieGameMyCode {
                 System.out.println();
             }
         } else {
-            System.out.println("Well then. GoodBye");
+            System.out.println("Well then  " + neeem + ". GoodBye");
         }
     }
 }
