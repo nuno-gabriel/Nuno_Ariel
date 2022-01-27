@@ -14,14 +14,15 @@ public class PhoneBillCalculator {
         System.out.println("Enter overage minutes:");
         double overageMinutes = scanner.nextDouble();
         System.out.println("Enter international calls minutes:");
-        double International = scanner.nextDouble();
+        double InternationalMinutes = scanner.nextDouble();
+        // this
         scanner.close();
 
         double overageCharge = calculateOverages(overageMinutes);
         double tax = calculateTax(baseCost + overageCharge);
-        double ring = calculateRoaming(baseCost + overageCharge);
+        double roaming = calculateRoaming(baseCost + InternationalMinutes);
 
-        calculateAndPrintBill(baseCost, overageCharge, tax, ring);
+        calculateAndPrintBill(baseCost, overageCharge, tax, roaming);
     }
 
     public static double calculateOverages(double extraMinutes){
@@ -40,14 +41,14 @@ public class PhoneBillCalculator {
         double ring = RoamingCalls * rate;
         return ring;
     }
-    public static void calculateAndPrintBill(double base, double overage, double tax, double ring){
-        double finalTotal = base + overage + tax + ring;
+    public static void calculateAndPrintBill(double base, double overage, double tax, double roaming){
+        double finalTotal = base + overage + tax + roaming;
 
         System.out.println("Phone Bill Statement");
         System.out.println("Plan: $" + String.format("%.2f", base));
         System.out.println("Overage: $" + String.format("%.2f", overage));
         System.out.println("Tax: $" + String.format("%.2f", tax));
-        System.out.println("Roaming: $" + String.format("%.2f", ring));
+        System.out.println("Roaming: $" + String.format("%.2f", roaming));
         System.out.println("Total: $" + String.format("%.2f", finalTotal));
     }
 }
